@@ -21,3 +21,11 @@ function locTheoChieuCao(arr) {
     }
     return arrOutput;
 }
+
+function locTheoDieuKien(arr, checkElement) {
+    const arrOutput = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(checkElement(arr[i])) arrOutput.push(arr[i]);
+    }
+    return arrOutput;
+}

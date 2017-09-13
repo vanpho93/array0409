@@ -1,14 +1,5 @@
 const arr = [1, 5, 4, 3, 6, 8, 2, 9];
 
-function locSoChan(arrNum) {
-    const arrOutput = [];
-    for(let i = 0; i < arrNum.length; i++) {
-        if(arrNum[i] % 2 === 0) arrOutput.push(arrNum[i]);
-    }
-    return arrOutput;
-}
-
-// Person name, age, height
 class Person {
     constructor(name, age, height) {
         this.name = name;
@@ -23,19 +14,14 @@ const arrPerson = [
     new Person('Tun', 20, 150)
 ];
 
-function locTheoTuoi(arr) {
+function locTheoDieuKien(arr, checkElement) {
     const arrOutput = [];
     for(let i = 0; i < arr.length; i++) {
-        if(arr[i].age > 12) arrOutput.push(arr[i]);
+        if(checkElement(arr[i])) arrOutput.push(arr[i]);
     }
     return arrOutput;
 }
 
-function locTheoChieuCao(arr) {
-    const arrOutput = [];
-    for(let i = 0; i < arr.length; i++) {
-        if(arr[i].height > 155) arrOutput.push(arr[i]);
-    }
-    return arrOutput;
-}
-console.log(locTheoChieuCao(arrPerson));
+console.log(locTheoDieuKien(arr, num => num % 2 === 0));
+console.log(locTheoDieuKien(arrPerson, person => person.age > 12));
+console.log(locTheoDieuKien(arrPerson, person => person.height > 155));
