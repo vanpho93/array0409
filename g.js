@@ -22,6 +22,10 @@ function locTheoDieuKien(arr, checkElement) {
     return arrOutput;
 }
 
-console.log(locTheoDieuKien(arr, num => num % 2 === 0));
+// console.log(locTheoDieuKien(arr, num => num % 2 === 0));
 // console.log(locTheoDieuKien(arrPerson, person => person.age > 12));
 // console.log(locTheoDieuKien(arrPerson, person => person.height > 155));
+
+console.log(arr.filter(num => num % 2 === 0));
+console.log(arrPerson.filter(person => person.age > 12));
+console.log(arrPerson.filter(person => person.height > 155));
