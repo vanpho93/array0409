@@ -24,10 +24,18 @@ const arrPerson = [
 ];
 
 function locTheoTuoi(arr) {
-    //return mang cac phan tu co tuoi > 12
+    const arrOutput = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].age > 12) arrOutput.push(arr[i]);
+    }
+    return arrOutput;
 }
 
 function locTheoChieuCao(arr) {
-    //return cac phan tu co chieu cao > 155
+    const arrOutput = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].height > 155) arrOutput.push(arr[i]);
+    }
+    return arrOutput;
 }
-// console.log(locSoChan(arr));
+console.log(locTheoChieuCao(arrPerson));
